@@ -457,4 +457,7 @@ header .shadow .logo {
   .newsletter form {
     width: 300px;
   }
+  .newsletter form .email {
+    width: 200px;
+  }
 }
