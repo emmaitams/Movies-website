@@ -16,6 +16,16 @@
   --bg-color: #fff;
 }
 
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background: var(--text-color);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+
 body {
   background: var(--text-color);
   color: var(--bg-color);
@@ -41,8 +51,16 @@ header {
 
 header .shadow {
   background: var(--bg-color);
+  box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
 
+header .shadow .navbar a {
+  color: var(--text-color);
+}
+
+header .shadow .logo {
+  color: var(--text-color);
+}
 .logo {
   font-size: 1.1rem;
   font-weight: 600;
@@ -319,4 +337,121 @@ header .shadow {
   padding: 20px;
   text-align: center;
   color: var(--bg-color);
+}
+
+@media (max-width: 1080px) {
+  .home-text {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 18px 4%;
+  }
+  section {
+    padding: 50px 4%;
+  }
+  .home-text {
+    padding: 0 4%;
+  }
+  .home-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 774px) {
+  header {
+    padding: 12px 4%;
+  }
+  #menu-icon {
+    display: initial;
+    color: var(--bg-color);
+  }
+  header.shadow #menu-icon {
+    color: var(--text-color);
+  }
+  .navbar {
+    position: absolute;
+    top: -570px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    row-gap: 1.4rem;
+    padding: 20px;
+    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+    transition: 0.2s all linear;
+    text-align: center;
+  }
+  .navbar a {
+    color: var(--text-color);
+  }
+  .navbar a:hover {
+    color: var(--main-color-color);
+    border-bottom: 2px solid var(--main-color);
+  }
+  .navbar a::after {
+    display: none;
+  }
+  .navbar.active {
+    top: 100%;
+  }
+  .home-text {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  .home-text span {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+  .movies-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  }
+}
+
+@media (max-width: 472px) {
+  .newsletter form .email {
+    width: auto;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+}
+
+@media (max-width: 370px) {
+  header {
+    padding: 6px 4%;
+  }
+  .home-text span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .home-text h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .play {
+    right: 2rem;
+    bottom: 8%;
+  }
+  .play .bx {
+    padding: 7px;
+  }
+  .movies-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+  }
+  .box .box-img {
+    height: 240px;
+  }
+  .home-text .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
 }
