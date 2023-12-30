@@ -459,9 +459,6 @@ header .shadow .logo {
     width: 300px;
   }
   .newsletter form .email {
-    width: 200px;
-  }
-  .newsletter form .btn {
-    margin-right: 150px;
+    width: auto;
   }
 }
