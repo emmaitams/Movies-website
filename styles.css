@@ -29,6 +29,7 @@ html::-webkit-scrollbar-thumb {
 body {
   background: var(--text-color);
   color: var(--bg-color);
+  overflow: scroll;
 }
 
 section {
@@ -459,5 +460,8 @@ header .shadow .logo {
   }
   .newsletter form .email {
     width: 200px;
+  }
+  .newsletter form .btn {
+    margin-right: 50px;
   }
 }
